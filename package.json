@@ -31,6 +31,7 @@
     "docs": "typedoc && echo \"electron-settings.js.org\" > docs/CNAME",
     "release": "standard-version",
     "prepublishOnly": "tsc",
+    "prepare": "tsc",
     "test": "npm run lint && npm run test:main && npm run test:renderer",
     "test:main": "electron-mocha --reporter spec --require ts-node/register 'src/**/*.test.ts'",
     "test:renderer": "electron-mocha --renderer --reporter spec --require ts-node/register 'src/**/*.test.ts'"
